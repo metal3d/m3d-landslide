@@ -9,7 +9,6 @@ Yes, take a look there: http://metal3d.org/m3dlandslide/presentation.html
 
 Warning: I have to change relative paths in presentation to make it work online.
 
-
 How to use ?
 ------------
 
@@ -39,4 +38,8 @@ To be up-to-date, run this command:
 
 Don't forget to help me by forking this repository and give some pull-request :)
 
+Contribution ?
+--------------
+
+I really need some testers and developpers to make working Firefox, Opera and (yes... I'm a dreamer) IE.
 
