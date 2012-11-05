@@ -7,7 +7,7 @@ Landslide theme that append a nice "3D coverflow like"
 How to use ?
 ------------
 
-Create your slide as mentionned on landslide documentation.
+Create your slide as mentionned on landslide documentation. See https://github.com/adamzap/landslide
 Get this theme in a standard directory then use:
 
     landslide your_file.rst -t path/to/theme/m3d-landslide
