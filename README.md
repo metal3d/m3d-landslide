@@ -3,6 +3,12 @@ m3d-landslide
 
 Landslide theme that append a nice "3D coverflow like"
 
+Example ?
+---------
+Yes, take a look there: http://metal3d.org/m3dlandslide/presentation.html
+
+Warning: I have to change relative paths in presentation to make it work online.
+
 
 How to use ?
 ------------
