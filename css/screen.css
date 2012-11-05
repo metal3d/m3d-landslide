@@ -50,9 +50,9 @@ div.slide {
   background: -webkit-gradient(linear, left bottom, left top, from(#bbd), to(#fff));
   background-color: #eee;
   background: -moz-linear-gradient(bottom, #bbd, #fff);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: margin 0.25s ease-in-out;
-  -o-transition: margin 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
   border-top-left-radius: 20px;
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -531,7 +531,6 @@ aside {
   z-index: 64;
   display: none;
 }
-
 body .slides .slide{
 	font-family: "Righteous" !important;
 
@@ -548,29 +547,43 @@ header h1, header h2, header h3, header h4, header h5, header h6 {
 
 .slides {
 	-webkit-perspective: 600;
+	-webkit-transform-style: preserve-3d;
+	-moz-perspective: 600px;
+	-moz-transform-style: preserve-3d;
+	-o-perspective: 600px;
+	-o-transform-style: preserve-3d;
 }
 
 .slide {
-	-webkit-transform-style: preserve-3d;
 	-webkit-transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	-o-transform: translateZ(0px);
 }
 .slide.future,
 .slide.far-future {
 	z-index: -1;
 	-webkit-transform: translateZ(-800px) rotateY(20deg);
+	-moz-transform: translateZ(-800px) rotateY(20deg);
+	-o-transform: translateZ(-800px) rotateY(20deg);
 }
 .slide.far-past,
 .slide.past {
 	z-index: -1;
 	-webkit-transform: translateZ(-800px) rotateY(-20deg);
+	-moz-transform: translateZ(-800px) rotateY(-20deg);
+	-o-transform: translateZ(-800px) rotateY(-20deg);
 }
 
 .slide.far-past {
 	-webkit-transform: translateZ(-1800px) rotateY(-45deg);
+	-moz-transform: translateZ(-1800px) rotateY(-45deg);
+	-o-transform: translateZ(-1800px) rotateY(-45deg);
 	z-index: -2
 }
 
 .slide.far-future {
 	-webkit-transform: translateZ(-1800px) rotateY(45deg);
+	-moz-transform: translateZ(-1800px) rotateY(45deg);
+	-o-transform: translateZ(-1800px) rotateY(45deg);
 	z-index: -2
 }
