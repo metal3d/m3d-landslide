@@ -50,9 +50,9 @@ div.slide {
   background: -webkit-gradient(linear, left bottom, left top, from(#bbd), to(#fff));
   background-color: #eee;
   background: -moz-linear-gradient(bottom, #bbd, #fff);
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   border-top-left-radius: 20px;
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -273,17 +273,30 @@ body.three-d div.slides {
 /* Content */
 
 header:not(:only-child) {
-  font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-  font-weight: normal;
-  font-size: 50px;
-  letter-spacing: -.05em;
-  color: black;
-  text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
-  position: absolute;
-  left: 30px;
-  top: 25px;
-  margin: 0;
-  padding: 0;
+    font-family: "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+    font-weight: normal;
+    letter-spacing: -.05em;
+    color: black;
+    text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    bottom: 14px;
+    height: auto;
+    line-height: 0;
+    font-size: 26pt;
+    text-align: right;
+    right: 35px;
+
+    background: none rgb(239, 239, 239);
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding-right: 16px;
+    border-radius: 8px;
+    right: 6px;
 }
 
 header h1, header h2, header h3, header h4, header h5, header h6 {
@@ -304,7 +317,7 @@ section, .slide header:only-child h1 {
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 100px;
+  margin-top: 32px;
   display: block;
   overflow: hidden;
 }
@@ -531,20 +544,26 @@ aside {
   z-index: 64;
   display: none;
 }
-body .slides .slide{
-	font-family: "Righteous" !important;
 
+/* M3D overrides */
+
+body {
+    background: none rgb(52, 52, 63)    
 }
 
 pre {
-	font-family: "Source Code pro"
+	/* font-family: "Source code pro"; */
+    font-size: 12pt;
+    background: none #FFF;
+    padding: 1em;
+    -webkit-border-radius: 0.5em
 }
-
+/*
 header h1, header h2, header h3, header h4, header h5, header h6 {
-	font-family: "Stalinist One";
-	font-size: 20pt
+    font-family: "Righteous";
+	font-size: 22pt
 }
-
+*/
 .slides {
 	-webkit-perspective: 600;
 	-webkit-transform-style: preserve-3d;
@@ -554,11 +573,36 @@ header h1, header h2, header h3, header h4, header h5, header h6 {
 	-o-transform-style: preserve-3d;
 }
 
-.slide {
+.slide{
 	-webkit-transform: translateZ(0px);
 	-moz-transform: translateZ(0px);
 	-o-transform: translateZ(0px);
+    opacity: 1.0
 }
+
+.slide section {
+    /*font-family: "Righteous"*/
+}
+
+
+.slide.future,
+.slide.past{
+    opacity: 0.3
+
+}
+
+.slide.far-future,
+.slide.far-past {
+    opacity: 0.0
+}
+
+body.expose .slide.future,
+body.expose .slide.past,
+body.expose .slide.far-future,
+body.expose .slide.far-past {
+    opacity: 1.0
+}
+
 .slide.future,
 .slide.far-future {
 	z-index: -1;
@@ -586,4 +630,15 @@ header h1, header h2, header h3, header h4, header h5, header h6 {
 	-moz-transform: translateZ(-1800px) rotateY(45deg);
 	-o-transform: translateZ(-1800px) rotateY(45deg);
 	z-index: -2
+}
+
+div.slide p.heading {
+    text-align: center;
+    margin: 35% auto 0 auto;
+    font-size: 30pt;
+}
+
+div.slide p.subtitle {
+    font-size: 14pt;
+    text-align: center
 }
