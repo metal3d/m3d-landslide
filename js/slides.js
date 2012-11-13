@@ -576,7 +576,7 @@ function main() {
         addRemoteWindowControls();
     })();
 
-  WebFontConfig = {
+/*  WebFontConfig = {
     google: { families: [ 'Source+Code+Pro::latin', 'Stalinist+One::latin', 'Righteous::latin', 'Press+Start+2P::latin' ] }
   };
   (function() {
@@ -588,5 +588,5 @@ function main() {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })();
-
+*/
 }
