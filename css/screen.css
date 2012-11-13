@@ -298,6 +298,9 @@ header:not(:only-child) {
     border-radius: 8px;
     right: 6px;
 }
+div.presenter_notes header {
+    display: none
+}
 
 header h1, header h2, header h3, header h4, header h5, header h6 {
   display: inline;
@@ -558,18 +561,16 @@ pre {
     padding: 1em;
     -webkit-border-radius: 0.5em
 }
-/*
-header h1, header h2, header h3, header h4, header h5, header h6 {
-    font-family: "Righteous";
-	font-size: 22pt
+
+div.presentation {
+    -moz-perspective: 600px;
+    -webkit-perspective: 600px;
+    -o-perspective: 600px;
 }
-*/
+
 .slides {
-	-webkit-perspective: 600;
 	-webkit-transform-style: preserve-3d;
-	-moz-perspective: 600px;
 	-moz-transform-style: preserve-3d;
-	-o-perspective: 600px;
 	-o-transform-style: preserve-3d;
 }
 
@@ -602,6 +603,7 @@ body.expose .slide.far-future,
 body.expose .slide.far-past {
     opacity: 1.0
 }
+
 
 .slide.future,
 .slide.far-future {
